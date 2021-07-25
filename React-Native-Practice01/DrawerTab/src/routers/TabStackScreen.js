@@ -6,12 +6,12 @@ import CpuListScreen from "../screens/CpuListScreen";
 import CpuDetailsScreen from "../screens/CpuDetailsScreen";
 import BoardListScreen from "../screens/BoardListScreen";
 import MemoryListScreen from "../screens/MemoryListScreen";
-import { MenuButton } from './DrawerStackScreen';
+import { MenuButton } from './MenuButton';
 
 const BottomTab = createBottomTabNavigator();
 
 const CpuStack = createStackNavigator();
-const CpuStackScreen = ({ navigation }) => {
+const CpuStackScreen = () => {
     return (
         <CpuStack.Navigator>
             <CpuStack.Screen
@@ -19,7 +19,7 @@ const CpuStackScreen = ({ navigation }) => {
                 component={CpuListScreen}
                 options={{
                     title: "메인화면",
-                    headerLeft: () => <MenuButton navigation={navigation} />
+                    headerLeft: () => <MenuButton/>
                 }}
             />
             <CpuStack.Screen name="cpudetails" component={CpuDetailsScreen} option={{}} />
@@ -28,7 +28,7 @@ const CpuStackScreen = ({ navigation }) => {
 } 
 
 const BoardStack = createStackNavigator();
-const BoardStackScreen = ({ navigation }) => {
+const BoardStackScreen = () => {
     return (
         <BoardStack.Navigator>
             <BoardStack.Screen
@@ -36,21 +36,21 @@ const BoardStackScreen = ({ navigation }) => {
                 component={BoardListScreen}
                 options={{
                     title: "메인화면",
-                    headerLeft: () => <MenuButton navigation={navigation} />
+                    headerLeft: () => <MenuButton/>
                 }} />
         </BoardStack.Navigator>
     )
 }
 
 const MemoryStack = createStackNavigator();
-const MemoryStackcreen = ({navigation}) => {
+const MemoryStackcreen = () => {
     return (
         <MemoryStack.Navigator>
             <MemoryStack.Screen
                 name="memorylist"
                 component={MemoryListScreen}
                 options={{
-                    headerLeft: () => <MenuButton navigation={navigation} />
+                    headerLeft: () => <MenuButton/>
                 }} />
         </MemoryStack.Navigator>
     )
