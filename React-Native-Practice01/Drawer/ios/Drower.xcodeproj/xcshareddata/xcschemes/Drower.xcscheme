@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "Drower.app"
-               BlueprintName = "Drower"
-               ReferencedContainer = "container:Drower.xcodeproj">
+               BuildableName = "Drawer.app"
+               BlueprintName = "Drawer"
+               ReferencedContainer = "container:Drawer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "DrowerTests.xctest"
-               BlueprintName = "DrowerTests"
-               ReferencedContainer = "container:Drower.xcodeproj">
+               BuildableName = "DrawerTests.xctest"
+               BlueprintName = "DrawerTests"
+               ReferencedContainer = "container:Drawer.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Drower.app"
-            BlueprintName = "Drower"
-            ReferencedContainer = "container:Drower.xcodeproj">
+            BuildableName = "Drawer.app"
+            BlueprintName = "Drawer"
+            ReferencedContainer = "container:Drawer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Drower.app"
-            BlueprintName = "Drower"
-            ReferencedContainer = "container:Drower.xcodeproj">
+            BuildableName = "Drawer.app"
+            BlueprintName = "Drawer"
+            ReferencedContainer = "container:Drawer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,4 +1,4 @@
-package com.drower;
+package com.Drawer;
 
 import android.app.Application;
 import android.content.Context;
@@ -41,6 +41,11 @@ public class MainApplication extends Application implements ReactApplication {
   }
 
   @Override
+  protected String getJSBundleFile() {
+    return CodePush.getJSBundleFile();
+  }
+
+  @Override
   public void onCreate() {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
@@ -62,7 +67,7 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.drower.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.Drawer.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);
