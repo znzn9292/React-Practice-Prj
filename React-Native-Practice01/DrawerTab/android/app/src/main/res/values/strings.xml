@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DrawerTab</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">76XiziMZV6isQicpUEYzpxlq5xOM5ldvXLgS2</string>
 </resources>

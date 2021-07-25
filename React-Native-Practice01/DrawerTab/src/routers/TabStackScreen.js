@@ -6,32 +6,12 @@ import CpuListScreen from "../screens/CpuListScreen";
 import CpuDetailsScreen from "../screens/CpuDetailsScreen";
 import BoardListScreen from "../screens/BoardListScreen";
 import MemoryListScreen from "../screens/MemoryListScreen";
-import Icon from 'react-native-vector-icons/Ionicons'
+import { MenuButton } from './DrawerStackScreen';
 
 const BottomTab = createBottomTabNavigator();
 
-const MenuButton = ({ navigation }) => {
-    const openMenu = () => {
-        navigation.openDrawer();
-    };
-
-    return <TouchableOpacity>
-        <Icon
-            name="ios-menu"
-            style={{
-                fontSize: 30,
-                marginLeft: 10,
-                marginTop: 5,
-                paddingLeft: 5,
-                paddingRight: 5,
-            }}
-            onPress={openMenu}
-        />
-    </TouchableOpacity>
-}
-
 const CpuStack = createStackNavigator();
-const CpuStackScreen = () => {
+const CpuStackScreen = ({ navigation }) => {
     return (
         <CpuStack.Navigator>
             <CpuStack.Screen
@@ -39,28 +19,39 @@ const CpuStackScreen = () => {
                 component={CpuListScreen}
                 options={{
                     title: "메인화면",
-                    headerLeft: () => <Button title="햄버거" />
+                    headerLeft: () => <MenuButton navigation={navigation} />
                 }}
             />
             <CpuStack.Screen name="cpudetails" component={CpuDetailsScreen} option={{}} />
         </CpuStack.Navigator>
     )
-}
+} 
 
 const BoardStack = createStackNavigator();
-const BoardStackScreen = () => {
+const BoardStackScreen = ({ navigation }) => {
     return (
         <BoardStack.Navigator>
-            <BoardStack.Screen name="boardlist" component={BoardListScreen} option={{}} />
+            <BoardStack.Screen
+                name="boardlist"
+                component={BoardListScreen}
+                options={{
+                    title: "메인화면",
+                    headerLeft: () => <MenuButton navigation={navigation} />
+                }} />
         </BoardStack.Navigator>
     )
 }
 
 const MemoryStack = createStackNavigator();
-const MemoryStackcreen = () => {
+const MemoryStackcreen = ({navigation}) => {
     return (
         <MemoryStack.Navigator>
-            <MemoryStack.Screen name="memorylist" component={MemoryListScreen} option={{}} />
+            <MemoryStack.Screen
+                name="memorylist"
+                component={MemoryListScreen}
+                options={{
+                    headerLeft: () => <MenuButton navigation={navigation} />
+                }} />
         </MemoryStack.Navigator>
     )
 }
