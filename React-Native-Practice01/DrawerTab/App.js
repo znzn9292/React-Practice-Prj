@@ -8,14 +8,15 @@
 
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet } from 'react-native'
-import TabStackScreen from './src/routers/TabStackScreen';
+import { SafeAreaView, StyleSheet } from 'react-native'
 import DrawerStackScreen from './src/routers/DrawerStackScreen';
-
+import StoreTabStackScreen from "./src/routers/StoreTabStackScreen";
 export default function App() {
   return (
     <NavigationContainer>
-      <DrawerStackScreen />
+      <SafeAreaView style={{ flex: 1 }}>
+        <DrawerStackScreen />
+      </SafeAreaView>
     </NavigationContainer>
   )
 }

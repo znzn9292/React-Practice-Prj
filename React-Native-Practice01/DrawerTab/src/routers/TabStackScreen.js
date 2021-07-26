@@ -7,6 +7,7 @@ import CpuDetailsScreen from "../screens/CpuDetailsScreen";
 import BoardListScreen from "../screens/BoardListScreen";
 import MemoryListScreen from "../screens/MemoryListScreen";
 import { MenuButton } from './MenuButton';
+import StoreTabStackScreen from './StoreTabStackScreen';
 
 const BottomTab = createBottomTabNavigator();
 
@@ -19,13 +20,13 @@ const CpuStackScreen = () => {
                 component={CpuListScreen}
                 options={{
                     title: "메인화면",
-                    headerLeft: () => <MenuButton/>
+                    headerLeft: () => <MenuButton />
                 }}
             />
             <CpuStack.Screen name="cpudetails" component={CpuDetailsScreen} option={{}} />
         </CpuStack.Navigator>
     )
-} 
+}
 
 const BoardStack = createStackNavigator();
 const BoardStackScreen = () => {
@@ -36,7 +37,7 @@ const BoardStackScreen = () => {
                 component={BoardListScreen}
                 options={{
                     title: "메인화면",
-                    headerLeft: () => <MenuButton/>
+                    headerLeft: () => <MenuButton />
                 }} />
         </BoardStack.Navigator>
     )
@@ -50,17 +51,34 @@ const MemoryStackcreen = () => {
                 name="memorylist"
                 component={MemoryListScreen}
                 options={{
-                    headerLeft: () => <MenuButton/>
+                    headerLeft: () => <MenuButton />
                 }} />
         </MemoryStack.Navigator>
     )
 }
 
-const TabStackScreen = ({ navigation }) => {
+const StoreStack = createStackNavigator();
+const StoreStackScreen = () => {
+    return (
+        <StoreStack.Navigator>
+            <StoreStack.Screen
+                name="storetab"
+                component={StoreTabStackScreen}
+                options={{
+                    title: "온라인 쇼핑몰",
+                    headerLeft: () => <MenuButton />
+                }}
+            />
+        </StoreStack.Navigator>
+    )
+}
+
+const TabStackScreen = () => {
     return <BottomTab.Navigator>
         <BottomTab.Screen name="cpustack" component={CpuStackScreen} />
         <BottomTab.Screen name="boardstack" component={BoardStackScreen} />
         <BottomTab.Screen name="memorystack" component={MemoryStackcreen} />
+        <BottomTab.Screen name="storestack" component={StoreStackScreen} />
     </BottomTab.Navigator>
 }
 
